@@ -1,0 +1,2 @@
+defmodule CryptoQuotation do
+end

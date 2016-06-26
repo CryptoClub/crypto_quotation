@@ -14,7 +14,7 @@ defmodule CryptoQuotation.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger]]
+    [applications: [:logger, :httpotion, :poison]]
   end
 
   # Dependencies can be Hex packages:
@@ -27,6 +27,9 @@ defmodule CryptoQuotation.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [
+      {:httpotion, "~> 3.0.0"},
+      {:poison, "~> 2.2"}
+    ]
   end
 end

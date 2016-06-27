@@ -32,4 +32,12 @@ defmodule CryptoQuotation.Mixfile do
       {:poison, "~> 2.2"}
     ]
   end
+
+  defp package do
+    [files: ~w(lib mix.exs README.md LICENSE),
+     maintainers: ["Esdras Eduardo"],
+     licenses: ["GNU"],
+     links: %{"GitHub" => "https://github.com/CryptoClub/crypto_quotation"}]
+  end
+
 end

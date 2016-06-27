@@ -5,6 +5,7 @@ defmodule CryptoQuotation.Mixfile do
     [app: :crypto_quotation,
      version: "0.0.1",
      elixir: "~> 1.2",
+     package: package(),
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      deps: deps]

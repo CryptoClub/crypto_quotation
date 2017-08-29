@@ -4,7 +4,7 @@ defmodule CryptoQuotation.Mixfile do
   def project do
     [app: :crypto_quotation,
      version: "0.0.1",
-     elixir: "~> 1.2",
+     elixir: "~> 1.5",
      package: package(),
      description: "Get quotation of crypto currencies",
      build_embedded: Mix.env == :prod,
@@ -16,7 +16,7 @@ defmodule CryptoQuotation.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger, :httpotion, :poison]]
+    [extra_applications: [:logger, :httpotion, :poison]]
   end
 
   # Dependencies can be Hex packages:
@@ -30,8 +30,8 @@ defmodule CryptoQuotation.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:httpotion, "~> 3.0.0"},
-      {:poison, "~> 2.2"}
+      {:httpotion, "~> 3.0"},
+      {:poison, "~> 3.1"}
     ]
   end
 

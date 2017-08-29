@@ -2,7 +2,7 @@ defmodule CryptoQuotation.CryptoCompare do
   use HTTPotion.Base
 
   def process_url(url) do
-    "https://www.cryptocompare.com/api/data/" <> url
+    "https://min-api.cryptocompare.com/data/" <> url
   end
 
   def process_response_body(body) do
@@ -16,7 +16,7 @@ defmodule CryptoQuotation.CryptoCompare do
     |> format()
   end
 
-  def format(%{status_code: 200, body: {:ok, %{"Data" => [%{"Price" => price}]}}}) do
+  def format(%{status_code: 200, body: {:ok, %{"BTC" => price}}}) do
     {:ok, price}
   end
 
